@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montagem e Manutenção de PC Gamer em Canoas | Informática Gaúcha</title>
+    <style>
+        :root {
+            --primary: #006039;
+            --primary-light: #A3D12A;
+            --bg-logo: #EAEAEA;
+            --whatsapp: #25D366;
+            --text-main: #2D3748;
+            --bg-dark-gamer: #0A0F0D;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #F7FAF8; color: var(--text-main); line-height: 1.6; }
+
+        header {
+            background: var(--bg-logo);
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .logo-img { height: 70px; width: auto; }
+        
+        .btn-voltar {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Banner Superior da Página Interna */
+        .page-banner {
+            background: linear-gradient(135deg, #092C1D 0%, var(--bg-dark-gamer) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .page-banner h1 { font-size: 36px; margin-bottom: 10px; }
+        .page-banner h1 span { color: var(--primary-light); }
+
+        /* Conteúdo Explicativo */
+        .content-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #4A5568;
+        }
+
+        .tech-step {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border-left: 5px solid var(--primary);
+        }
+
+        .tech-step h3 { color: var(--primary); margin-bottom: 10px; font-size: 20px; }
+
+        .cta-box {
+            background: var(--bg-logo);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+            border: 2px dashed var(--primary);
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        footer {
+            background-color: #1A202C;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Informática Gaúcha" class="logo-img">
+        </div>
+        <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+    </header>
+
+    <section class="page-banner">
+        <h1>Manutenção e Upgrade de <span>PC Gamer</span></h1>
+        <p>Alta performance e cuidado técnico para o seu setup rodar no máximo.</p>
+    </section>
+
+    <main class="content-container">
+        <p class="intro-text">
+            Computadores de alta performance exigem um cuidado diferenciado. Na Informática Gaúcha, nós entendemos de hardware gamer e realizamos procedimentos rigorosos para evitar superaquecimento, quedas de FPS (lag) e desgaste prematuro das suas peças de alto valor.
+        </p>
+
+        <div class="tech-step">
+            <h3>1. Higienização Técnica Avançada</h3>
+            <p>Remoção completa de poeira acumulada nos coolers, dissipadores e ventoinhas utilizando ferramentas antiestáticas. A poeira bloqueia o fluxo de ar e faz o processador e a placa de vídeo reduzirem o desempenho para não queimarem.</p>
+        </div>
+
+        <div class="tech-step">
+            <h3>2. Troca de Pasta Térmica de Alta Condutividade</h3>
+            <p>Substituímos a pasta térmica ressecada do seu processador e chip gráfico por compostos térmicos premium de marcas líderes de mercado. Isso garante uma redução drástica nas temperaturas internas de trabalho.</p>
+        </div>
+
+        <div class="tech-step">
+            <h3>3. Montagem Profissional & Cable Management</h3>
+            <p>Comprou peças novas e não sabe como montar? Nós organizamos todos os cabos (cable management) atrás do gabinete para melhorar a estética visual do vidro e desobstruir a passagem de ar interna.</p>
+        </div>
+
+        <div class="tech-step">
+            <h3>4. Otimização de Software e Testes de Estresse</h3>
+            <p>Atualizamos a BIOS da placa-mãe, instalamos os drivers de vídeo corretos e realizamos testes em softwares de benchmark para garantir que o seu computador está entregando 100% da potência contratada de forma estável.</p>
+        </div>
+
+        <div class="cta-box">
+            <h2>Quer agendar uma revisão ou fazer um upgrade?</h2>
+            <p>Traga seu computador gamer para uma avaliação detalhada em nosso laboratório técnico.</p>
+            <a href="https://wa.me" class="btn-whatsapp" target="_blank">🟢 Agendar Manutenção pelo WhatsApp</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Informática Gaúcha — Rua Eça de Queiroz, 480 - Harmonia, Canoas/RS</p>
+    </footer>
+
+</body>
+</html>

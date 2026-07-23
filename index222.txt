@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática Gaúcha | Assistência Técnica em Canoas</title>
+    <style>
+        :root {
+            --primary: #006039; /* Verde escuro do "GAÚCHA" */
+            --primary-light: #A3D12A; /* Verde-limão do "INFORMÁTICA" */
+            --bg-logo: #EAEAEA; /* Cor cinza do seu logo */
+            --whatsapp: #25D366;
+            --bg-light: #F7FAF8;
+            --text-main: #2D3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Deixa a rolagem suave ao clicar nos links */
+        }
+
+        /* Topo / Barra de Destaques Estilo E-commerce */
+        .top-notice-bar {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 6px 10px;
+            font-size: 13px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Header Principal */
+        header {
+            background: var(--bg-logo);
+            padding: 10px 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .logo-container .logo-img {
+            height: 70px;
+            width: auto;
+            display: block;
+        }
+
+        /* Estrutura de Navegação com Mega Menu */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--primary);
+            margin-left: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active-highlight {
+            color: var(--primary-light);
+        }
+
+        /* Classe de animação para quando clicar no link debaixo */
+        .nav-link.active-highlight {
+            background-color: rgba(0, 96, 57, 0.1);
+            animation: pulseEffect 1.5s infinite;
+        }
+
+        @keyframes pulseEffect {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        /* O Mega Menu Oculto */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 750px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-radius: 0 0 8px 8px;
+            border-top: 3px solid var(--primary-light);
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease-in-out;
+            transform: translateY(10px);
+        }
+
+        /* Exibe o Mega Menu ao passar o mouse */
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-column h4 {
+            font-size: 14px;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 5px;
+            font-weight: 800;
+        }
+
+        .mega-column ul {
+            list-style: none;
+        }
+
+        .mega-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .mega-column ul li a {
+            text-decoration: none;
+            color: #4A5568;
+            font-size: 14px;
+            transition: color 0.1s;
+        }
+
+        .mega-column ul li a:hover {
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        /* Banner de Oferta dentro do Mega Menu */
+        .mega-banner {
+            background: linear-gradient(135deg, #092C1D 0%, var(--primary) 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mega-banner p { font-size: 12px; opacity: 0.8; }
+        .mega-banner h5 { font-size: 16px; margin: 5px 0; color: var(--primary-light); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #092C1D 0%, var(--primary) 100%);
+            color: white;
+            padding: 95px 20px;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 42px; margin-bottom: 20px; font-weight: 800; }
+        .hero h1 span { color: var(--primary-light); }
+        .hero p { font-size: 19px; margin-bottom: 35px; opacity: 0.9; }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Seção de Grid de Serviços Principal */
+        .services { padding: 85px 20px; max-width: 1200px; margin: 0 auto; }
+        
+        /* Estilo do título que agora é um Link clicável */
+        .services-title-link {
+            display: block;
+            text-align: center;
+            font-size: 34px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 800;
+            margin-bottom: 50px;
+            transition: color 0.2s;
+        }
+        
+        .services-title-link:hover {
+            color: var(--primary-light);
+        }
+
+        .services-title-link::after { 
+            content: ''; 
+            display: block; 
+            width: 70px; 
+            height: 4px; 
+            background-color: var(--primary-light); 
+            margin: 12px auto 0 auto; 
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 35px 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border-top: 6px solid var(--primary); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-8px); }
+        .card.highlight { border-top-color: var(--primary-light); }
+        .card h3 { margin-bottom: 15px; font-size: 21px; font-weight: 700; }
+        .card p { font-size: 15px; color: #5A6A80; margin-bottom: 15px; }
+
+        footer { background-color: #1A202C; color: white; padding: 50px 20px; text-align: center; border-top: 4px solid var(--primary-light); }
+        footer a { color: #E2E8F0; text-decoration: none; }
+
+        @media (max-width: 900px) {
+            .mega-menu { width: 100%; left: 0; grid-template-columns: 1fr; }
+            .hero h1 { font-size: 30px; }
+            header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-notice-bar">
+        ⚡ Orçamento rápido via WhatsApp e Garantia técnica em todos os serviços de Canoas!
+    </div>
+
+    <!-- Identificador inserido no topo para a página saber para onde voltar ao clicar -->
+    <span id="topo-site"></span>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Informática Gaúcha" class="logo-img">
+        </div>
+        <nav>
+            <div class="nav-item">
+                <!-- Adicionado ID de controle para o script de animação -->
+                <span class="nav-link" id="menu-especialidades">Nossas Especialidades ▾</span>
+                
+                <div class="mega-menu">
+                    <!-- Coluna 1: Computadores -->
+                    <div class="mega-column">
+                        <h4>Desktops & Jogos</h4>
+                        <ul>
+                            <li><a href="pc-gamer.html">Montagem PC Gamer</a></li>
+                            <li><a href="pc-gamer.html">Troca de Pasta Térmica</a></li>
+                            <li><a href="computadores.html">Formatação & Backup</a></li>
+                            <li><a href="computadores.html">Remoção de Vírus</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 2: Notebooks -->
+                    <div class="mega-column">
+                        <h4>Notebooks & Telas</h4>
+                        <ul>
+                            <li><a href="notebooks.html">Upgrade de SSD</a></li>
+                            <li><a href="notebooks.html">Conserto de Dobradiças</a></li>
+                            <li><a href="notebooks.html">Troca de Tela LCD</a></li>
+                            <li><a href="notebooks.html">Troca de Teclado e Bateria</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: Impressoras e Banner -->
+                    <div class="mega-column" style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <h4>Linha de Impressão</h4>
+                            <ul>
+                                <li><a href="impressoras.html">Manutenção de Impressoras</a></li>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática Gaúcha | Assistência Técnica em Canoas</title>
+    <style>
+        :root {
+            --primary: #006039; /* Verde escuro do "GAÚCHA" */
+            --primary-light: #A3D12A; /* Verde-limão do "INFORMÁTICA" */
+            --bg-logo: #EAEAEA; /* Cor cinza do seu logo */
+            --whatsapp: #25D366; /* Verde do WhatsApp */
+            --bg-light: #F7FAF8;
+            --text-main: #2D3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Topo do Site */
+        header {
+            background: var(--bg-logo);
+            padding: 15px 24px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .logo-container .logo-img {
+            height: 70px;
+            width: auto;
+            display: block;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            margin-left: 24px;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Banner Principal com Imagem de Fundo */
+        .hero {
+            background: linear-gradient(135deg, rgba(9, 44, 29, 0.9) 0%, rgba(0, 96, 57, 0.9) 100%), 
+                        url('banner-fundo.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 40px; margin-bottom: 20px; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hero h1 span { color: var(--primary-light); }
+        .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.95; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+
+        /* Botão Verde do WhatsApp */
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Seção de Especialidades */
+        .services { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .services h2 { text-align: center; font-size: 32px; margin-bottom: 40px; color: #1A202C; }
+        .services h2::after { content: ''; display: block; width: 70px; height: 4px; background-color: var(--primary-light); margin: 12px auto 0 auto; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        
+        .card { 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            border-top: 6px solid var(--primary); 
+            text-align: left;
+            overflow: hidden;
+        }
+        .card.highlight { border-top-color: var(--primary-light); }
+        
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #E2E8F0;
+        }
+
+        .card-content {
+            padding: 25px 20px;
+        }
+
+        .card h3 { margin-bottom: 12px; font-size: 20px; font-weight: 700; color: #1A202C; }
+        .card p { font-size: 15px; color: #5A6A80; margin-bottom: 20px; }
+
+        .link-detalhes {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .link-detalhes:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        /* Seção de Contato */
+        .contact-section {
+            background-color: #FFFFFF;
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        .contact-container { max-width: 500px; margin: 0 auto; }
+        .contact-container h2 { font-size: 28px; margin-bottom: 25px; color: #1A202C; }
+        
+        .contact-list { list-style: none; text-align: left; display: inline-block; }
+        .contact-item { font-size: 16px; color: #4A5568; margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
+        .contact-item a { color: #4A5568; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+        .contact-item a:hover { color: var(--primary); }
+        .contact-item .wp-link { color: #128C7E; }
+        .contact-item .wp-link:hover { color: var(--whatsapp); }
+
+        /* Rodapé */
+        footer { background-color: #1A202C; color: white; padding: 40px 20px; text-align: center; border-top: 4px solid var(--primary-light); }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Informática Gaúcha" class="logo-img">
+        </div>
+        <nav>
+            <a href="#servicos">Especialidades</a>
+            <a href="historia.html">Nossa História</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Seu Computador Lento, Parado ou com Defeito? <span>Nós Resolvemos.</span></h1>
+        <p>Assistência técnica e loja especializada em Canoas. Diagnóstico preciso, peças de alta qualidade e garantia in cada serviço.</p>
+        <a href="https://wa.me!" class="btn-whatsapp" target="_blank">🟢 Falar no WhatsApp</a>
+    </section>
+
+    <section class="services" id="servicos">
+        <h2>Nossas Especialidades</h2>
+        
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card highlight">
+                <img src="img-pc-gamer.jpg" alt="Manutenção de PC Gamer" class="card-img">
+                <div class="card-content">
+                    <h3>Montagem & PC Gamer</h3>
+                    <p>Montagem sob medida, cable management rigoroso, limpeza interna técnica pesada e troca de pasta térmica de alta performance.</p>
+                    <a href="pc-gamer.html" class="link-detalhes">Ver explicação de manutenção →</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="img-notebook.jpg" alt="Conserto de Notebook" class="card-img">
+                <div class="card-content">
+                    <h3>Conserto de Notebooks</h3>
+                    <p>Troca de telas quebradas, teclados e baterias. Reparo especializado em carcaças/dobradiças e upgrade para SSD.</p>
+                    <a href="notebooks.html" class="link-detalhes">Ver explicação de manutenção →</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="img-computador.jpg" alt="Suporte para Computadores de Mesa" class="card-img">
+                <div class="card-content">
+                    <h3>Suporte Computadores</h3>
+                    <p>Formatação completa com backup preventivo dos seus arquivos, eliminação profunda de vírus e malwares, substituição de peças.</p>
+                    <a href="computadores.html" class="link-detalhes">Ver explicação de manutenção →</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="img-impressora.jpg" alt="Manutenção de Impressora" class="card-img">
+                <div class="card-content">
+                    <h3>Manutenção de Impressoras</h3>
+                    <p>Limpeza química e desentupimento de cabeçotes, troca de roletes, almofadas e revisão mecânica completa.</p>
+                    <a href="impressoras.html" class="link-detalhes">Ver explicação de manutenção →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato Fiel -->
+    <section class="contact-section" id="contato">
+        <div class="contact-container">
+            <h2>Fale Conosco</h2>
+            
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span>💬</span>
+                    <a href="https://wa.me!" target="_blank" class="wp-link">
+                        WhatsApp: (51) 3031-1812
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <span>✉️</span>
+                    <a href="mailto:contato.informaticagaucha@gmail.com">
+                        contato.informaticagaucha@gmail.com
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <span>⏰</span>
+                    <span>Segunda a Sexta — 09h às 12h e 13:30h às 18h</span>
+                </li>
+                <li class="contact-item">
+                    <span>📍</span>
+                    <a href="https://google.com" target="_blank">
+                        Rua Eça de Queiroz, 480 - Harmonia, Canoas/RS
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>

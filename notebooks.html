@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conserto e Manutenção de Notebooks em Canoas | Informática Gaúcha</title>
+    <style>
+        :root {
+            --primary: #006039; /* Verde escuro do logo */
+            --primary-light: #A3D12A; /* Verde-limão do logo */
+            --bg-logo: #EAEAEA; /* Cinza do logo */
+            --whatsapp: #25D366;
+            --text-main: #2D3748;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #F7FAF8; color: var(--text-main); line-height: 1.6; }
+
+        header {
+            background: var(--bg-logo);
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .logo-img { height: 70px; width: auto; }
+        
+        .btn-voltar {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Banner Superior */
+        .page-banner {
+            background: linear-gradient(135deg, #092C1D 0%, var(--primary) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--primary-light);
+        }
+
+        .page-banner h1 { font-size: 36px; margin-bottom: 10px; }
+        .page-banner h1 span { color: var(--primary-light); }
+
+        /* Conteúdo Explicativo */
+        .content-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #4A5568;
+        }
+
+        .tech-step {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border-left: 5px solid var(--primary);
+        }
+
+        .tech-step h3 { color: var(--primary); margin-bottom: 10px; font-size: 20px; }
+
+        .cta-box {
+            background: var(--bg-logo);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+            border: 2px dashed var(--primary);
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        footer {
+            background-color: #1A202C;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Informática Gaúcha" class="logo-img">
+        </div>
+        <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+    </header>
+
+    <section class="page-banner">
+        <h1>Assistência Técnica de <span>Notebooks</span></h1>
+        <p>Soluções precisas e substituição de componentes para todas as marcas.</p>
+    </section>
+
+    <main class="content-container">
+        <p class="intro-text">
+            O notebook é uma ferramenta essencial para o trabalho, estudos e lazer. Por ser um aparelho compacto e portátil, ele exige ferramentas específicas e mão de obra delicada para reparos. Na Informática Gaúcha, consertamos seu equipamento com o máximo de zelo e agilidade.
+        </p>
+
+        <div class="tech-step">
+            <h3>1. Upgrade de SSD (Notebook até 10x mais rápido)</h3>
+            <p>Seu notebook demora minutos para ligar ou fica travando? Substituímos o HD antigo por um SSD de alta velocidade e realizamos a clonagem ou reinstalação do sistema. Seu equipamento antigo volta a voar sem precisar comprar um novo.</p>
+        </div>
+
+        <div class="tech-step">
+            <h3>2. Troca de Tela de LCD / LED</h3>
+            <p>Troca rápida e segura de telas riscadas, trincadas, com linhas coloridas ou que deixaram de acender. Trabalhamos apenas com telas novas, padrão original e com garantia por escrito.</p>
+        </div>
+
+        <div class="tech-step">
+            <h3>3. Reparo de Carcaças e Dobradiças</h3>
+            <p>O notebook está estalando ou abrindo a carcaça ao mover a tela? Esse é um problema clássico que, se não for resolvido, pode quebrar a tela interna. Fazemos a reconstrução das travas e a lubrificação ou troca das dobradiças travadas.</p>
+        </div>
+
+        <div class="tech-step">
+            <h3>4. Substituição de Teclado, Bateria e Conectores</h3>
+            <p>Efetuamos a troca de teclados com teclas falhando, baterias viciadas que não seguram carga e reparo no conector de energia (Jack DC) que mau contato na hora de carregar.</p>
+        </div>
+
+        <div class="cta-box">
+            <h2>Precisa de um orçamento para o seu notebook?</h2>
+            <p>Trabalhamos com marcas líderes do mercado como Dell, HP, Lenovo, Asus, Acer, Samsung, entre outras.</p>
+            <a href="https://wa.me" class="btn-whatsapp" target="_blank">🟢 Solicitar Orçamento no WhatsApp</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Informática Gaúcha — Rua Eça de Queiroz, 480 - Harmonia, Canoas/RS</p>
+    </footer>
+
+</body>
+</html>
