@@ -245,7 +245,7 @@
                 <li class="contact-item">
                     <span>📍</span>
                     <a href="https://google.com" target="_blank">
-                        Rua Eça de Queiroz, 480 - Harmonia, Canoas/RS
+                        Rua Clovis Bevilaqua, 457 - Harmonia, Canoas/RS
                     </a>
                 </li>
                 <li class="contact-item">
